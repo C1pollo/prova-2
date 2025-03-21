@@ -4,12 +4,15 @@ float sommaf( float in1,float in2);
 //tipo senza ritorno, che la variabile di ritono non ha un tipo specificato 
 void scambiof(float *in1, float *in2);
 // se mettessi a b c al di fuori del main sarebbero varaibili globali 
+int multif(int in1, int in2);
+int sum(int in1, int in2);
 int main (void){
 
     float a=3.0,b=2.4,c;
+    int d=9,f=4,g=5;
 
     c=sommaf(a,b);
-    printf("la somma tra %f e %f fa %f\n",a,b,c);
+    printf("la moltiplicazione della somma tra %i e %i fa %i\n",d,f,multif( sum(d,f),g ));
 
     printf("Prima lo scambio A: %f, B: %f\n", a,b);
     scambiof(&a,&b);
@@ -35,4 +38,12 @@ void scambiof (float *addr_a, float *addr_b)
     printf("%f e %f dopo scambio \n",*addr_a,*addr_b);
 
     return;
+}
+int multif(int in1,int in2)
+{
+    return in1*in2;
+}
+int sum(int in1, int in2)
+{
+    return in1+in2;
 }
